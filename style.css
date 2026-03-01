@@ -1,0 +1,1239 @@
+/* --- VARIABLES --- */
+:root {
+    --primary-color: #c079a2;
+    /* Pink Utama */
+    --secondary-color: #a05a85;
+    /* Pink Gelap (Hover) */
+    --bg-light: #f9e6f0;
+    /* Pink Muda Background */
+    --text-dark: #4a4a4a;
+    /* Abu Gelap */
+    --text-light: #ffffff;
+    /* Putih */
+    --shadow: 0 10px 30px rgba(192, 121, 162, 0.2);
+}
+
+/* --- RESET & GLOBAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: var(--text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    /* Dibatasi agar pas tampilan mobile */
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    /* Gradient Pink ke Putih */
+    background: linear-gradient(180deg, #fff0f5 0%, var(--bg-light) 100%);
+    padding-top: 40px;
+    padding-bottom: 60px;
+    /* Ruang napas bawah ditambah karena wave hilang */
+    text-align: center;
+    min-height: auto;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo */
+.logo-wrapper {
+    margin-bottom: 20px;
+}
+
+.main-logo {
+    max-width: 64px;
+    /* Ukuran logo disesuaikan */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Typography */
+.headline {
+    font-size: 1.4rem;
+    /* Ukuran pas di HP */
+    font-weight: 700;
+    color: var(--primary-color);
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.text-highlight {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.5);
+    text-decoration-thickness: 4px;
+}
+
+.sub-headline {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #666;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+}
+
+.description {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 25px;
+    padding: 0 10px;
+}
+
+/* Product Image */
+.hero-image-container {
+    margin: 15px auto;
+    width: 220px;
+}
+
+.product-hero-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+/* --- CTA BUTTON --- */
+.cta-wrapper {
+    margin-bottom: 25px;
+}
+
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #25D366;
+    /* Warna Hijau WA Official */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 14px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 320px;
+}
+
+.btn-primary:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-primary i {
+    font-size: 1.4rem;
+}
+
+/* --- TRUST BADGES --- */
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+.badge-item img {
+    height: 45px;
+    /* Sesuaikan tinggi logo halal & bpom */
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(0%);
+    /* Pastikan berwarna */
+}
+
+.badge-separator {
+    color: #ddd;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+/* --- INGREDIENTS SECTION --- */
+.ingredients-section {
+    padding: 80px 0;
+    background-color: #fff9fc;
+    /* Sedikit shade pink sangat muda untuk variasi */
+}
+
+.ingredients-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.ingredient-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(192, 121, 162, 0.1);
+}
+
+.ing-image img {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.ing-content h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 2px;
+}
+
+.dosage {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    background-color: var(--bg-light);
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.ing-content p {
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Hero Ingredient Highlight */
+.hero-ing {
+    background-color: var(--primary-color);
+    border: none;
+    transform: scale(1.02);
+}
+
+.hero-ing .ing-content h4,
+.hero-ing .ing-content p {
+    color: #ffffff;
+}
+
+.hero-ing .dosage {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+/* --- RESPONSIVE --- */
+@media (min-width: 768px) {
+    .ingredients-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+/* =========================================
+   FLOATING WA BUTTON (DENGAN TEKS)
+   ========================================= */
+.floating-wa {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #25D366;
+    /* Warna Hijau WA */
+    color: white;
+    text-decoration: none;
+    /* Padding diatur agar bentuknya seperti kapsul (pill) yang rapi */
+    padding: 6px 16px 6px 6px;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    /* Keadaan Awal: Sembunyi & Tergeser ke bawah */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100px);
+}
+
+/* Saat class .show ditambahkan via JS */
+.floating-wa.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.wa-icon-box {
+    width: 36px;
+    /* Sedikit dikecilkan agar tidak menutupi layar HP */
+    height: 36px;
+    background-color: white;
+    color: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    margin-right: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wa-text {
+    font-size: 0.85rem;
+    font-weight: 700;
+    white-space: nowrap;
+    /* Memastikan teks tidak turun/patah ke baris baru */
+    letter-spacing: 0.3px;
+}
+
+/* Animasi Pulse Halus */
+.floating-wa.show {
+    animation: wa-pulse 2s infinite;
+}
+
+@keyframes wa-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.floating-wa:hover {
+    transform: scale(1.05) translateY(-5px);
+    background-color: #128C7E;
+}
+
+/* Penyesuaian Khusus Layar HP Kecil (Mencegah tombol terlalu memakan tempat) */
+@media (max-width: 480px) {
+    .floating-wa {
+        bottom: 20px;
+        right: 15px;
+        padding: 5px 14px 5px 5px;
+        /* Dipersempit sedikit */
+    }
+
+    .wa-icon-box {
+        width: 32px;
+        height: 32px;
+        font-size: 1.2rem;
+        margin-right: 8px;
+    }
+
+    .wa-text {
+        font-size: 0.8rem;
+        /* Font dikecilkan agar proporsional di HP */
+    }
+}
+
+/* --- REAL TESTIMONI SECTION --- */
+.real-testi-section {
+    padding: 60px 0;
+    background-color: #fff;
+    overflow: hidden;
+    /* Mencegah scrollbar horizontal browser muncul */
+}
+
+/* Container untuk Scroll Horizontal */
+.screenshot-scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 20px 40px 20px;
+    /* Padding bawah lebih besar untuk bayangan */
+
+    /* Scroll Snap agar berhenti pas di tengah gambar (App-like feel) */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scroll di iOS */
+
+    /* Alignment kunci mengatasi beda tinggi */
+    align-items: flex-start;
+}
+
+/* Sembunyikan Scrollbar tapi tetap bisa di-scroll */
+.screenshot-scroll-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+
+.screenshot-scroll-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.screenshot-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: #dcc0d0;
+    border-radius: 10px;
+}
+
+/* Item Screenshot */
+.screenshot-item {
+    flex: 0 0 auto;
+    /* Jangan mengecil (shrink), pertahankan ukuran asli */
+    width: 260px;
+    /* Lebar tetap agar rapi di HP */
+    scroll-snap-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.screenshot-item img {
+    width: 100%;
+    height: auto;
+    /* Tinggi otomatis mengikuti rasio gambar asli */
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+}
+
+.screenshot-item:hover {
+    transform: scale(1.02);
+    /* Efek zoom sedikit saat hover */
+}
+
+/* Hint Text (Geser) */
+.swipe-hint {
+    text-align: center;
+    color: #999;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: -10px;
+    animation: pulseText 2s infinite;
+}
+
+@keyframes pulseText {
+
+    0%,
+    100% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Tablet/Desktop */
+@media (min-width: 768px) {
+    .screenshot-item {
+        width: 300px;
+        /* Di layar besar, gambar sedikit lebih lebar */
+    }
+}
+
+/* --- SCROLL INDICATOR --- */
+.scroll-indicator-wrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.scroll-indicator {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-color);
+    /* Menggunakan pink #c079a2 */
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.scroll-indicator:hover {
+    opacity: 1;
+}
+
+/* Animasi Panah Membal (Bounce) */
+.bounce {
+    animation: bounce 2s infinite;
+    font-size: 1.2rem;
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-8px);
+    }
+
+    60% {
+        transform: translateY(-4px);
+    }
+}
+
+/* --- HOW TO USE SECTION (PRAKTIS) --- */
+.how-to-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    /* Background putih bersih */
+}
+
+.how-to-img-wrapper {
+    margin: 20px auto;
+    width: 100%;
+}
+
+.how-to-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.how-to-box {
+    background-color: #fff9fc;
+    /* Soft pink border box */
+    border: 2px dashed var(--primary-color);
+    border-radius: 20px;
+    padding: 30px 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.how-to-steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.step-card {
+    flex: 1;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 15px auto;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Warna icon pagi & malam */
+.morning {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+}
+
+.night {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+}
+
+.step-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.step-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.step-card strong {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.step-divider {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    opacity: 0.5;
+    padding: 0 10px;
+}
+
+.how-to-highlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(192, 121, 162, 0.15);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.how-to-highlight i {
+    font-size: 1.2rem;
+}
+
+/* Responsif: Jika di layar sangat kecil, tumpuk ke bawah */
+@media (max-width: 380px) {
+    .how-to-steps {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .step-divider {
+        transform: rotate(90deg);
+        /* Plus nya diputar kalau numpuk atas-bawah */
+    }
+}
+
+/* =========================================
+   SECTION KEAMANAN & KECOCOKAN 
+   ========================================= */
+.safety-section {
+    padding: 80px 0;
+    background-color: #fff9fc;
+    /* Background pink sangat muda agar kontras dengan section lain */
+}
+
+.safety-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.safety-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(192, 121, 162, 0.08);
+    border-left: 4px solid var(--primary-color);
+    /* Aksen garis pink brand di sebelah kiri */
+    transition: transform 0.3s ease;
+}
+
+.safety-card:hover {
+    transform: translateY(-3px);
+}
+
+.safety-icon {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    /* Warna icon pink brand senada dengan garis */
+    min-width: 35px;
+    margin-top: 2px;
+}
+
+.safety-card h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.safety-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   SECTION CARA PAKAI (SUPER PRAKTIS) 
+   ========================================= */
+.how-to-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    /* Background putih bersih */
+}
+
+.how-to-box {
+    background-color: #fff9fc;
+    border: 2px dashed var(--primary-color);
+    /* Garis putus-putus memberikan kesan "Step/Panduan" */
+    border-radius: 20px;
+    padding: 30px 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.how-to-steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.step-card {
+    flex: 1;
+    /* Agar bagian pagi dan malam ukurannya seimbang */
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 15px auto;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradient Khusus untuk Icon Pagi dan Malam */
+.step-icon.morning {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    /* Kuning ke Orange (Matahari) */
+}
+
+.step-icon.night {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    /* Biru gelap ke terang (Bulan/Malam) */
+}
+
+.step-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.step-card p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+.step-card p strong {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.step-divider {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    opacity: 0.5;
+    padding: 0 10px;
+}
+
+.how-to-highlight {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(192, 121, 162, 0.15);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-align: left;
+}
+
+.how-to-highlight i {
+    font-size: 1.2rem;
+}
+
+
+/* =========================================
+   RESPONSIVE LAYOUT (TABLET & MOBILE)
+   ========================================= */
+
+/* Untuk Tablet/Desktop: Jadikan Kartu Keamanan 2 Kolom */
+@media (min-width: 768px) {
+    .safety-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+}
+
+/* Untuk Layar HP Sangat Kecil (Lebar di bawah 400px) */
+@media (max-width: 400px) {
+    .how-to-steps {
+        flex-direction: column;
+        /* Tumpuk step pagi & malam dari atas ke bawah */
+        gap: 20px;
+    }
+
+    .step-divider {
+        transform: rotate(90deg);
+        /* Putar icon (+) agar mengarah ke bawah */
+    }
+
+    .how-to-highlight {
+        font-size: 0.8rem;
+        /* Perkecil teks highlight sedikit */
+    }
+}
+
+/* Pastikan Hero Section punya posisi relative agar indikator bisa menempel bagus */
+.hero-section {
+    position: relative;
+    padding-bottom: 20px;
+    /* Sesuaikan ruang agar indikator tidak terpotong */
+}
+
+/* --- BENEFIT SECTION --- */
+.benefit-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.text-pink {
+    color: var(--primary-color);
+}
+
+.section-subtitle {
+    font-size: 0.95rem;
+    color: #777;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Grid Layout */
+.benefit-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Default mobile 1 kolom */
+    gap: 20px;
+}
+
+/* Benefit Card */
+.benefit-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    background-color: #fff;
+    border: 1px solid var(--bg-light);
+    /* Menggunakan #f9e6f0 */
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: var(--primary-color);
+}
+
+/* Icon Style */
+.benefit-icon {
+    min-width: 60px;
+    height: 60px;
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+
+/* Text Style */
+.benefit-text h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.benefit-text p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* --- RESPONSIVE --- */
+@media (min-width: 768px) {
+    .benefit-grid {
+        grid-template-columns: 1fr 1fr;
+        /* Desktop 2 kolom */
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- ANIMATIONS --- */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.floating-anim {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+.pulse-anim {
+    animation: pulse 2s infinite;
+}
+
+/* Entrance Animations */
+.fade-in-down {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- RESPONSIVE --- */
+@media (min-width: 768px) {
+    .headline {
+        font-size: 2.2rem;
+    }
+
+    .hero-section {
+        border-radius: 0 0 60px 60px;
+    }
+}
+
+/* =========================================
+   FINAL CTA SECTION (REVISI LAYOUT)
+   ========================================= */
+.cta-section {
+    padding: 60px 0 80px 0;
+    background: linear-gradient(180deg, #ffffff 0%, var(--bg-light) 100%);
+}
+
+.cta-box {
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(192, 121, 162, 0.15);
+    max-width: 450px;
+    margin: 0 auto;
+    border: 1px solid rgba(192, 121, 162, 0.2);
+}
+
+.cta-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+.cta-subtitle {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 35px;
+    padding: 0 10px;
+    line-height: 1.5;
+}
+
+/* Penyesuaian Jarak Gambar dan Kotak Harga */
+.final-product-showcase {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    /* Memberikan jarak pasti antara gambar dan harga */
+}
+
+.final-product-img {
+    width: 170px;
+    /* Ukuran gambar sedikit disesuaikan */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    /* Bayangan lebih halus */
+    /* margin-bottom dihapus agar tidak saling menabrak */
+}
+
+.price-tag {
+    background-color: #fff9fc;
+    border: 2px solid var(--bg-light);
+    border-radius: 20px;
+    padding: 20px 15px;
+    /* Padding dibuat rata atas-bawah */
+    display: block;
+    width: 100%;
+    max-width: 260px;
+}
+
+.price-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.price-amount {
+    display: block;
+    font-size: 1.9rem;
+    /* Sedikit dibesarkan agar menonjol */
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.price-unit {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* Penyesuaian Tombol CTA agar tidak turun baris */
+.cta-box .btn-primary {
+    width: 100%;
+    max-width: 280px;
+    /* Dibatasi agar tidak menyentuh tombol floating WA di kanan */
+    font-size: 1rem;
+    /* Ukuran font dikecilkan sedikit */
+    padding: 14px 20px;
+    white-space: nowrap;
+    /* Memaksa teks tetap dalam 1 baris (tidak turun) */
+    margin: 0 auto;
+    display: inline-flex;
+    justify-content: center;
+}
+
+.cta-note {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.cta-note i {
+    color: #25D366;
+    margin-right: 5px;
+}
+
+/* =========================================
+   FAQ SECTION (ACCORDION)
+   ========================================= */
+.faq-section {
+    padding: 60px 0 80px 0;
+    background-color: #fff9fc;
+    /* Soft pink background agar beda dengan background section atasnya */
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: #ffffff;
+    border: 1px solid var(--bg-light);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.faq-item:hover {
+    border-color: var(--primary-color);
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: left;
+    outline: none;
+    transition: color 0.3s ease;
+    gap: 15px;
+    /* Jarak antara teks pertanyaan dan panah */
+}
+
+.faq-question i {
+    color: var(--primary-color);
+    transition: transform 0.4s ease;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    /* Mencegah icon mengecil kalau teksnya panjang */
+}
+
+/* State Aktif (Saat pertanyaan dibuka) */
+.faq-item.active .faq-question {
+    color: var(--primary-color);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+    /* Panah berputar ke atas */
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, background-color 0.4s ease;
+    background-color: #fafafa;
+    /* Warna abu-abu sangat muda untuk bedakan dengan pertanyaan */
+}
+
+.faq-answer p {
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px 20px 20px;
+    /* Padding atas dibuat 0 agar gabung halus dengan pertanyaan */
+}
+
+.faq-answer strong {
+    color: var(--text-dark);
+}
+
+
+/* =========================================
+   FOOTER SECTION
+   ========================================= */
+.main-footer {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.85rem;
+    border-top-left-radius: 30px;
+    /* Lengkungan halus di bagian atas footer */
+    border-top-right-radius: 30px;
+}
+
+.main-footer p {
+    margin: 5px 0;
+    opacity: 0.9;
+}
+
+.main-footer strong {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.copyright {
+    margin-top: 15px !important;
+    font-size: 0.75rem;
+    opacity: 0.7 !important;
+}
